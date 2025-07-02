@@ -1,0 +1,320 @@
+@font-face {
+  font-family: etna;
+  src: url(assets/etna.otf);
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: etna;
+    /* overflow: hidden; */
+    text-decoration: none;
+}
+.main header{
+    background-color: Black;
+    width: 100%;
+    height: 80px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.main header h1{
+    font-size: 40px;
+}
+.main .container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.main .container .left{
+    width: 50%;
+}
+.main .container .left img{
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+}
+.main .container .left .circle{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background-color: black;
+    /* opacity: 0.7; */
+    position: absolute;
+    bottom: 100px;
+    left: 180px;
+    z-index: -2;
+}
+.main .container .right{
+    width: 50%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .container .right h1{
+    font-size: 66px;
+    text-shadow: 2px 2px 4px #000000;
+    line-height: 1.5;
+}
+.main .container .right h3{
+    font-size: 26px;
+    opacity: .8;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.main .container .right p{
+    font-weight: 300;
+}
+.main .container .right .social {
+    margin-top: 20px;
+    display: flex;
+}
+
+.main .container .right .social a {
+    width: auto;
+    height: 40px;
+    background-color: black;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.9s ease-in;
+    overflow: hidden; 
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+.main .container .right .social a h3 {
+    font-size: 18px;
+    color: white;
+    
+    opacity: 0;
+    max-width: 0;
+    transition: all 0.5s ease;
+    white-space: nowrap; 
+}
+
+.main .container .right .social a img {
+    width: 40px !important;
+}
+
+.main .container .right .social a:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.249);
+}
+
+.main .container .right .social a:hover h3 {
+    opacity: 1;
+    max-width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.tablecont{
+    position: relative;
+}
+.tablecont h1{
+    text-align: right;
+    margin-right: 30px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.tablecont h1::after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 270px;
+    height: 5px;
+    background-color: black;
+    border-radius: 25px;
+}
+.tablecont .table{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: calc(100vh - 36px);
+    
+}
+.tablecont table {
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid lightgrey;   /* 🌫️ light grey outer border */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+.tablecont th, td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6; /* subtle inner row lines */
+}
+
+.tablecont tr:last-child td {
+  border-bottom: none; /* removes bottom line of last row */
+}
+.tablecont span{
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5px;
+    
+
+}
+.tablecont th span{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+.tablecont td span{
+    background-color: rgb(242, 242, 242);
+    color: black;
+}
+.tablecont .com span{
+    background-color: rgb(200, 200, 200) !important;
+    color: black;
+}
+.tablecont .circle1{
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.359);
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    z-index: -1;
+}
+.tablecont .circle2{
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    z-index: -1;
+}
+.formcont{
+    position: relative;
+    z-index: 99;
+    background-color: white;
+}
+.formcont h1{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.formcont h1::after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 270px;
+    height: 5px;
+    background-color: black;
+    border-radius: 25px;
+}
+.formcont .form{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: calc(100vh - 36px);
+    
+}
+.formcont form{
+    width: 400px;
+    height: auto;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    padding:25px;
+    background-color: white;
+    box-shadow: 3px 3px 5px lightgray;
+}
+.formcont form div{
+    width: 400px;
+    margin-bottom: 10px;
+    
+}
+
+.formcont form div input{
+    width: 380px;
+    border: 2px solid lightgray;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-top: 5px;
+
+}
+.formcont form div input:focus{
+    border: 2px solid black;
+}
+.formcont form h4{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.formcont form div label{
+    font-size: 14px;
+    font-weight: 500;
+}
+.formcont .gender div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.formcont .gender div input{
+    width: auto;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.formcont select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 8px;
+    border-radius: 25px;
+    margin-left: calc(50% - 100px);
+}
+ .formcont textarea {
+  width: 380px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  color: black;
+  resize: none;
+  border: 2px solid lightgray;
+}
+.formcont input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+  }
+.formcont input[type="radio"]:checked {
+    background-color: black;
+    border-color: black;
+  }
+.formcont button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 8px;
+    border-radius: 25px;
+    margin-left: calc(50% - 100px);
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 5px lightgray;
+} 
+.formcont .svg1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(10px);
+}
+.formcont .svg2{
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+}

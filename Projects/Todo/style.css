@@ -1,0 +1,123 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.center{
+    min-width: 300px;
+    width: 500px;
+    min-height: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 4px lightgray;
+}
+.center h1{
+    color: rgb(212, 80, 80);
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+    letter-spacing: 1.3px;
+}
+.center h1 img{
+    height: 40px;
+}
+.center .inputtodo{
+    width: 90%;
+    margin: auto;
+    border: 2px solid lightgray;
+    /* padding: 10px; */
+    border-radius: 25px;
+    display: flex;
+}
+.center .inputtodo input{
+    padding: 10px;
+    width: 91%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+
+}
+.center .inputtodo:focus-within{
+    border: rgb(212, 80, 80) 2px solid;
+}
+.center .inputtodo i{
+    padding: 10px;
+    background-color: rgb(212, 80, 80);
+    color: white;
+    width: 10%;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.center .todolist{
+    margin: auto;
+    width: 90%;
+    list-style: none;
+}
+.center .todolist li{
+    cursor: pointer;
+    padding: 20px;
+    right: -18px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 25px; */
+    /* border: 1px solid black; */
+}
+/* .center .todolist li:hover{
+    box-shadow: 5px 5px 4px lightgray;
+} */
+.center .todolist li::before{
+    position: absolute;
+    left: -15px;
+    content: "";
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+}
+.center .todolist li.checked::before{
+    position: absolute;
+    left: -15px;
+    content: "";
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    background: url("assets/icons8-done-48.png");
+    background-position: center;
+    background-size: cover;
+}
+.center .todolist li.checked span{
+    color: rgb(174, 172, 172);
+    text-decoration: line-through;
+}
+.center .todolist li i{
+    cursor: pointer;
+    text-decoration: none !important;
+    color: lightgray;
+    font-size: 17px;
+    align-self: center;
+    z-index: 9;
+    position: relative;
+}
+.center .todolist li i:hover{
+    color: rgb(212, 80, 80);
+}
+pre{
+    color: red;
+    text-align: center;
+    font-size: 14px;
+}
