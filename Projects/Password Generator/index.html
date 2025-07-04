@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="div">
+            <input type="password" name="password" id="password" placeholder="Click Generate..." readonly>
+            <i class="fa-solid fa-eye vis"></i>
+            <i class="fa-solid fa-copy copy"></i>
+        </div>
+        <div class="alpha">
+            <input type="checkbox" name="alpa" id="alpha" checked>
+            <h3>Alphabets</h3>
+        </div>
+        <div class="num">
+            <input type="checkbox" name="num" id="num" checked>
+            <h3>Number</h3>
+        </div>
+        <div class="Special">
+            <input type="checkbox" name="spec" id="spec" checked>
+            <h3>Special</h3>
+        </div>
+        <div class="char">
+            <h3>No. Of. Characters</h3>
+            <input type="radio" name="char" id="char" class="c8" value="8" checked>
+            <h3>8</h3>
+            <input type="radio" name="char" id="char" class="c16" value="16">
+            <h3>16</h3>
+        </div>
+        <div class="gen">
+            <h3>Generate</h3>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
