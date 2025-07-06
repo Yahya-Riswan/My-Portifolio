@@ -802,6 +802,12 @@ header .right .resume:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.projects .container.expanded {
+    max-height: none;
 }
 .projects .container>div{
     max-width: 300px;
@@ -812,6 +818,9 @@ header .right .resume:hover {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* .projects .container>div:hover img{
     filter: grayscale(100%);
@@ -904,7 +913,28 @@ header .right .resume:hover {
     bottom: 0;
     left: 25%;
 }
-
+.projects #show{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.projects #show h3{
+    padding: 10px;
+    border-radius: 25px;
+    border: var(--card-bg) 2px solid;
+    background-color: #0d253858;
+    backdrop-filter: blur(2px);
+    color: var(--text-muted);
+    font-family: etna;
+    transition: all 0.2s ease;
+}
+.projects #show h3.act:hover{
+    transform: scale(1.1);
+}
+.projects #show h3.act{
+    color: var(--text-color);
+}
 .achievments {
     padding-top: 100px;
 }

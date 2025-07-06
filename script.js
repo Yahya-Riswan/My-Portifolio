@@ -210,3 +210,24 @@ document.addEventListener("mousemove", (e) => {
       span.remove();
     }, 8000);
 });
+
+
+
+const container = document.querySelector('.container');
+const button = document.querySelector('#show h3');
+
+function checkContentOverflow() {
+    if (container.scrollHeight > container.clientHeight) {
+        button.classList.add("act");
+    } else {
+        button.classList.remove("act");
+    }
+}
+
+button.addEventListener('click', () => {
+    container.classList.toggle('expanded');
+    button.textContent = container.classList.contains('expanded') ? 'Show Less' : 'Show More';
+});
+
+
+window.addEventListener('load', checkContentOverflow);

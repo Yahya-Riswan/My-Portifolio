@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3D Draggable Dice</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 800px;
+    }
+
+    .dice {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.1s ease;
+        cursor: grab;
+    }
+
+    .face {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .face1 { transform: rotateY(0deg) translateZ(50px); }
+    .face2 { transform: rotateY(90deg) translateZ(50px); }
+    .face3 { transform: rotateY(180deg) translateZ(50px); }
+    .face4 { transform: rotateY(-90deg) translateZ(50px); }
+    .face5 { transform: rotateX(90deg) translateZ(50px); }
+    .face6 { transform: rotateX(-90deg) translateZ(50px); }
+</style>
+</head>
+<body>
+
+<div class="dice" id="dice">
+    <div class="face face1">1</div>
+    <div class="face face2">2</div>
+    <div class="face face3">3</div>
+    <div class="face face4">4</div>
+    <div class="face face5">5</div>
+    <div class="face face6">6</div>
+</div>
+
+<script>
+const dice = document.getElementById('dice');
+let isDragging = false;
+let startX, startY;
+let rotationX = 0;
+let rotationY = 0;
+
+dice.addEventListener('mousedown', startDrag);
+document.addEventListener('mousemove', onDrag);
+document.addEventListener('mouseup', endDrag);
+
+dice.addEventListener('touchstart', startDrag);
+document.addEventListener('touchmove', onDrag);
+document.addEventListener('touchend', endDrag);
+
+function startDrag(e) {
+    isDragging = true;
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+    startY = e.touches ? e.touches[0].clientY : e.clientY;
+    dice.style.cursor = 'grabbing';
+}
+
+function onDrag(e) {
+    if (!isDragging) return;
+
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    const y = e.touches ? e.touches[0].clientY : e.clientY;
+
+    const deltaX = x - startX;
+    const deltaY = y - startY;
+
+    rotationY += deltaX * 0.5;
+    rotationX -= deltaY * 0.5;
+
+    dice.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+    startX = x;
+    startY = y;
+}
+
+function endDrag() {
+    isDragging = false;
+    dice.style.cursor = 'grab';
+}
+</script>
+
+</body>
+</html>

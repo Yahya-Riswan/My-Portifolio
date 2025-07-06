@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guesing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="score">
+    <div class="player">
+        <h2>Player : <span id="ps">0</span></h2>
+    </div>
+    <div class="draw">
+        <h2>Draw : <span id="ds">0</span></h2>
+    </div>
+    <div class="computer">
+        <h2>Computer : <span id="cs">0</span></h2>
+    </div>
+</div>
+<pre class="ans"></pre>
+<div class="dice" id="dice">
+    <div class="face face1">
+        <div class="div">
+            <div class="circle red"></div>
+        </div>
+    </div>
+    <div class="face face2">
+        <div class="div left">
+            <div class="circle"></div>
+        </div>
+        <div class="div right">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div class="face face3">
+        <div class="div left">
+            <div class="circle"></div>
+        </div>
+        <div class="div center">
+            <div class="circle"></div>
+        </div>
+        <div class="div right">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div class="face face4">
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div class="face face5">
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="div center">
+            <div class="circle"></div>
+        </div>
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        
+    </div>
+    <div class="face face6">
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="div">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+<div class="set">
+    <div class="computer">
+        <h3>Computer : <span id="cst">1</span></h3>
+    </div>
+    <div class="select">
+        <h3 class="act">1</h3>
+        <h3>2</h3>
+        <h3>3</h3>
+        <h3>4</h3>
+        <h3>5</h3>
+        <h3>6</h3>
+
+    </div>
+    <button onclick="rollDice()">Roll Dice</button>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
