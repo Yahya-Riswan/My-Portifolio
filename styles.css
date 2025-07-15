@@ -958,6 +958,9 @@ header .right .resume:hover {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* .projects .container>div:hover img{
     filter: grayscale(100%);
