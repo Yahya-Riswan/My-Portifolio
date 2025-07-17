@@ -1038,7 +1038,9 @@ header .right .resume:hover {
     border: 1px solid white;
     font-weight: 100;
 }
+
 .achievments .container>div .links{
+    margin-top: 20px;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
