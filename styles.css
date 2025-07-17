@@ -935,6 +935,28 @@ header .right .resume:hover {
 .projects #show h3.act{
     color: var(--text-color);
 }
+.achievments #show{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.achievments #show h3{
+    padding: 10px;
+    border-radius: 25px;
+    border: var(--card-bg) 2px solid;
+    background-color: #0d253858;
+    backdrop-filter: blur(2px);
+    color: var(--text-muted);
+    font-family: etna;
+    transition: all 0.2s ease;
+}
+.achievments #show h3.act:hover{
+    transform: scale(1.1);
+}
+.achievments #show h3.act{
+    color: var(--text-color);
+}
 .achievments {
     padding-top: 100px;
 }
@@ -943,11 +965,18 @@ header .right .resume:hover {
     color: var(--text-color);
     font-family: hammer;
 }
+
+.achievments .container.expanded {
+    max-height: none;
+}
 .achievments .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 1s ease;
 }
 .achievments .container>div{
     max-width: 300px;

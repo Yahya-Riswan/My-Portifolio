@@ -213,21 +213,40 @@ document.addEventListener("mousemove", (e) => {
 
 
 
-const container = document.querySelector('.container');
-const button = document.querySelector('#show h3');
+const pcontainer = document.querySelector('.projects .container');
+const pbutton = document.querySelector('.projects #show h3');
 
-function checkContentOverflow() {
-    if (container.scrollHeight > container.clientHeight) {
-        button.classList.add("act");
+function pcheckContentOverflow() {
+    if (pcontainer.scrollHeight > pcontainer.clientHeight) {
+        pbutton.classList.add("act");
     } else {
-        button.classList.remove("act");
+        pbutton.classList.remove("act");
     }
 }
 
-button.addEventListener('click', () => {
-    container.classList.toggle('expanded');
-    button.textContent = container.classList.contains('expanded') ? 'Show Less' : 'Show More';
+pbutton.addEventListener('click', () => {
+    pcontainer.classList.toggle('expanded');
+    pbutton.textContent = pcontainer.classList.contains('expanded') ? 'Show Less' : 'Show More';
 });
 
 
-window.addEventListener('load', checkContentOverflow);
+window.addEventListener('load', pcheckContentOverflow);
+
+const acontainer = document.querySelector('.achievments .container');
+const abutton = document.querySelector('.achievments #show h3');
+
+function acheckContentOverflow() {
+    if (acontainer.scrollHeight > acontainer.clientHeight) {
+        abutton.classList.add("act");
+    } else {
+        abutton.classList.remove("act");
+    }
+}
+
+abutton.addEventListener('click', () => {
+    acontainer.classList.toggle('expanded');
+    abutton.textContent = acontainer.classList.contains('expanded') ? 'Show Less' : 'Show More';
+});
+
+
+window.addEventListener('load', acheckContentOverflow);
